@@ -69,3 +69,9 @@ you would add the following to your Wordpress template:
 ## Installation
 
 Upload the plugin to your blog's `/wp-content/plugins`, Activate it, then start using the template functions in your templates.
+
+## TODO
+
+* The way the plugin is configured is pretty terrible.
+* Make it auto-detect MODx Evo/Revo version and just work. Currently only works with MODx Evo, afaik.
+* More testing.
