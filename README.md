@@ -45,21 +45,25 @@ E.g: To run the MODx chunk called `footer` and output the result in your Wordpre
     <?php modxGetChunk('footer'); ?>
 ```
 
-### modxRunSnippet($snippet_name, $param_string)
+### modxRunSnippet($snippet_name, $param_array)
 
 Execute the MODx snippet `$snippet_name` and return the rendered result as a string.
 
-E.g: To replicate this MODx snippet call:
+E.g: To replicate these two MODx snippet calls and output the result:
 
 
 ```
-    [[Wayfinder? &startId=`0` &level=`1` &sortBy=`menuindex` &sortOrder=`asc`]]
+    [[Wayfinder?startId=`0` &level=`1` &sortBy=`menuindex` &sortOrder=`asc`]]
+    
+    [[Ditto?parents=0&display=5&tpl='@CODE:<li><a href="[+url+]" title="[+pagetitle+]">[+pagetitle+]</a> <span>[+date+]</span></li>']]
 ```
 
 you would add the following to your Wordpress template:
 
 ```php
-    <?php modxRunSnippet('Wayfinder', '&startId=`0` &level=`1` &sortBy=`menuindex` &sortOrder=`asc`'); ?>
+    <?php modxRunSnippet('Wayfinder', array('startId' => 0, 'level' => 1, 'sortBy' => 'menuindex', 'sortOrder' => 'asc')); ?>
+    
+    <?php modxRunSnippet('Ditto', array('parents' => 0, 'display' => 5, 'tpl' => '@CODE:<li><a href="[+url+]" title="[+pagetitle+]">[+pagetitle+]</a> <span>[+date+]</span></li>')); ?>
 ```
 
 ## Installation
