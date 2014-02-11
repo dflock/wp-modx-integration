@@ -4,7 +4,7 @@
 		Plugin URI: http://www.codeistry.com/
 		Description: Provides some helper functions which you can use in templates to access the MODx API and seamlessly integrate your Wordpress and MODx frontends.
 		Author: Duncan Lock
-		Version: 0.2
+		Version: 0.3
 		Author URI: http://www.codeistry.com/
 	*/
 
